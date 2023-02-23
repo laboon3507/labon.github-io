@@ -1,0 +1,108 @@
+# labon.github-io
+<!DOCTYPE html>
+<html class="translated-ltr"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Black Bot Paneli</title>
+	<style type="text/css">
+		body{background: green;text-align: center;color: black;font-family: sans-serif;}
+		#sr{width: 100px}
+		input,button{font-size: 18px;padding: 10px 14px;border-radius: 6px;text-align: center;border: none;}
+		#grid{display:flex;
+flex-direction: column; display: grid;grid-template-columns: repeat(2, auto);width: 380px;margin: 0 auto;}
+		small{margin-bottom: 4px;font-size: 14px}
+		button{background-color: red;}
+		button:active{transform: scale(0.985);}
+		#bb button{width: 380px} 
+		hr{width: 420px;border: none;height: 1px;background-color: green;}
+	</style>
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.cYEbrOmw59Q.L.W.O/d=0/rs=AN8SPfpU282joXDlbkUblMtWLWoZn4bb2g/m=el_main_css"></head>
+<body>
+	<div style="margin-top: 3rem;"></div>
+	<div id="grid">
+		<h1 style="color:yellow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Black Bot</font></font></h1>
+                <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">slap</font></font></small>
+		<small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">gir baba</font></font></small>
+		<input type="text" id="sr" placeholder="5" value="5">
+		<input type="text" id="rm" placeholder="4Sew">
+	</div>
+	<div id="bb" style="margin-top: 0.5rem;">
+		<button id="ab"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ahhh</font></font></button>
+		<button onclick="j(document.getElementById('sr').value ,document.getElementById('rm').value)" id="bt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">BAS BABABA</font></font></button>
+	</div>
+	<!-- <hr>
+	<div id="dd">
+		<button onclick="j(document.getElementById('sr').value, '116w')">#16w</button>
+		<button onclick="j(document.getElementById('sr').value, '11C4')">#1C4</button>
+		<button onclick="j(document.getElementById('sr').value, '4HkD')">#HkD</button>
+		<hr> 
+		<button onclick="j(document.getElementById('sr').value, '4Sew')">#Sew</button>
+		<button onclick="j(document.getElementById('sr').value, 't8Ho')">#Hot</button>
+		<button onclick="j(document.getElementById('sr').value, '1199')">#199</button>
+		<button onclick="j(document.getElementById('sr').value, '1198')">#198</button>
+	</div> -->
+<script>
+	let r = [];
+	let p, u, x;
+
+	let ws = '';
+
+	function j(a, b){
+		if(ws != '' && ws.readyState == 1){
+			ws.close();
+		}
+
+		ws = new WebSocket(`wss://server0${a}.gartic.io/socket.io/?EIO=3&transport=websocket`);
+
+		ws.onopen = () => {
+			ws.send(`42[3,{"v":20000,"nick":"karabela${Math.floor(Math.random() * 9999)}","avatar":"","sala":"${b}"}]`);
+			ws.send(`42[46,1675119253574]`);
+		}
+
+		ws.onmessage = (m) => {
+			const d = JSON.parse(m.data.slice(2));
+			if(d[0] == 5){
+				p = d[2];
+				r = d[5];
+				u = d[1];
+				for(let i = 0; i < r.length; i++){
+					if(!r[i].nick.startsWith('m')){
+						ws.send(`42[45,${p},["${r[i].id}",true]]`);
+					}
+				}
+			}
+
+			if(d[0] == 11){
+				x = d[2];
+
+				if(x == '.all'){
+					for(let i = 0; i < r.length; i++){
+						ws.send(`42[45,${p},["${r[i].id}",true]]`);
+					}
+					x = '';
+				}
+
+				else if(x != ''){
+					ws.send(`42[45,${p},["${r.filter(a => a.nick == x)[0].id}",true]]`);
+					x = '';
+				}
+			}
+
+			if(d[0] == 23 && !d[1].nick.startsWith('m')){
+				ws.send(`42[45,${p},["${d[1].id}",true]]`);
+			}
+
+			if(d[0] == 45 && d[2] == u){
+				ws.close();
+				j(document.getElementById('sr').value ,document.getElementById('rm').value);
+			}
+		}
+		
+		setInterval(() => {
+			ws.send(`2`);
+		}, 25000);
+	}
+</script><div id="goog-gt-" class="skiptranslate VIpgJd-yAWNEb-L7lbkb" dir="ltr"><div style="padding: 8px;"><div><div class="VIpgJd-yAWNEb-l4eHX"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="20" height="20" alt="Google Çeviri"></div></div></div><div style="padding: 8px; float: left; width: 100%;"><h1 class="VIpgJd-yAWNEb-r4nke VIpgJd-yAWNEb-mrxPge">hoşgeldin baba</h1></div><div style="padding: 8px;"><div class="VIpgJd-yAWNEb-nVMfcd-fmcmS"></div></div><div class="VIpgJd-yAWNEb-cGMI2b" style="padding: 8px;"><div class="VIpgJd-yAWNEb-Z0Arqf-PLDbbf"><span class="VIpgJd-yAWNEb-Z0Arqf-hSRGPd">devam et meşgul etme</span></div><div class="VIpgJd-yAWNEb-fw42Ze-Z0Arqf-haAclf"><hr style="color: #ccc; background-color: white; height: 1px; border: none;"><div class="VIpgJd-yAWNEb-Z0Arqf-H9tDt"></div></div></div><div class="VIpgJd-yAWNEb-jOfkMb-Ne3sFf" style="display: none;"></div></div>
+
+
+</body></html>
